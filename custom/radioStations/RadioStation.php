@@ -42,7 +42,7 @@ class RadioStation {
 
     public function getConstantName(): string
     {
-        return preg_replace("/[^a-z0-9]/i", "_", $this->getName());
+        return strtoupper(preg_replace("/[^a-z0-9]/i", "_", $this->getName()));
     }
 
     public function getStreamUrl(): string
