@@ -1,6 +1,6 @@
 <?php
 
-namespace Discord\Bot\Commands;
+namespace Discord\Bot\radioStations;
 
 enum RadioStations: int
 {
@@ -18,7 +18,7 @@ enum RadioStations: int
 
     public static function getStreamUrl(self $station): string
     {
-        return __DIR__."/../radioStations/".self::getName($station).".mp3";
+        return __DIR__."/".self::getName($station).".mp3";
     }
 
     public static function getPrintableName(self $station): string

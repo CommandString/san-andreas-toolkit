@@ -3,6 +3,7 @@
 namespace Discord\Bot\Commands;
 
 use Discord\Bot\Config;
+use Discord\Bot\radioStations\RadioStations;
 use Discord\Builders\CommandBuilder;
 use Discord\Builders\MessageBuilder;
 use Discord\Parts\Interactions\Command\Choice;
