@@ -2,7 +2,7 @@
 
 namespace Discord\Bot\Events;
 
-use Discord\Bot\Commands\Ping;
+use Discord\Bot\Commands\Radio;
 use Discord\Discord;
 
 /**
@@ -13,7 +13,7 @@ class ready extends Template {
     {
         echo "\n\n{$discord->application->name} ready!\n\n";
 
-        (new Ping)->listen();
+        (new Radio)->listen();
     }
   
     public function getEvent(): string
