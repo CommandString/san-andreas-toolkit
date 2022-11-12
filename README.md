@@ -1,5 +1,5 @@
 # San Andreas
-A Grand Theft Auto San Andreas themed discord bot. *Inspired by realdiegopoptarts San Andreas Toolkit bot*
+A Grand Theft Auto San Andreas themed discord bot. *Inspired by realdiegopoptart's San Andreas Toolkit bot*
 
 # Prerequisites #
 * PHP 8.1
