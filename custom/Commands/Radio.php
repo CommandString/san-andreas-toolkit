@@ -3,7 +3,7 @@
 namespace Discord\Bot\Commands;
 
 use Discord\Bot\Config;
-use Discord\Bot\radioStations\RadioStations;
+use Discord\Bot\radioStations\RadioStation;
 use Discord\Builders\CommandBuilder;
 use Discord\Builders\MessageBuilder;
 use Discord\Parts\Interactions\Command\Choice;
@@ -32,15 +32,15 @@ class Radio extends Template {
             }
 
             $existingVoiceClient->close();
-            $interaction->respondWithMessage(MessageBuilder::new()->setContent("Stopped playing **".RadioStations::getPrintableName(Config::get()->stationsPlaying->{$interaction->guild_id})."**"), true);
+            $interaction->respondWithMessage(MessageBuilder::new()->setContent("Stopped playing **".Config::get()->stationsPlaying->{$interaction->guild_id}->getName()."**"), true);
             Config::get()->stationsPlaying->{$interaction->guild_id} = null;
         }
     }
 
     public function play(Interaction $interaction, $options) {
-        $station = RadioStations::getByInt($options->get("name", "station")->value);
-        $stationName = RadioStations::getPrintableName($station);
-        $stationStreamUrl = realpath(RadioStations::getStreamUrl($station));
+        $station = new RadioStation($options->get("name", "station")->value);
+        $stationName = $station->getName();
+        $stationStreamUrl = $station->getStreamUrl();
         $existingVoiceClient = Config::get()->discord->getVoiceClient($interaction->guild_id);
 
         $voiceChannel = $interaction->member->getVoiceChannel();
@@ -58,7 +58,7 @@ class Radio extends Template {
             });
         } else {
             if ($voiceChannel->id !== $existingVoiceClient->getChannel()->id) {
-                $interaction->respondWithMessage(MessageBuilder::new()->setContent("Members are listening to **".RadioStations::getPrintableName(Config::get()->stationsPlaying->{$voiceChannel->guild_id})."** in <#{$existingVoiceClient->getChannel()->id}>."), true);
+                $interaction->respondWithMessage(MessageBuilder::new()->setContent("Members are listening to **".Config::get()->stationsPlaying->{$voiceChannel->guild_id}->getName()."** in <#{$existingVoiceClient->getChannel()->id}>."), true);
             } else {
                 $existingVoiceClient->close();
                 $this->play($interaction, $options);
@@ -86,10 +86,10 @@ class Radio extends Template {
             ->setType(Option::INTEGER)
         ;
 
-        foreach (RadioStations::cases() as $station) {
+        foreach (RadioStation::getAllStations() as $station) {
             $radioStations->addChoice((new Choice(Config::get()->discord))
-                ->setName(RadioStations::getPrintableName($station))
-                ->setValue($station->value)
+                ->setName($station->getName())
+                ->setValue($station->stationId)
             );
         }
 
