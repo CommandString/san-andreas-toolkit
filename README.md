@@ -8,9 +8,13 @@ The PHP version of realdiegopoptarts discord.js San Andreas Toolkit
 
 # Setup
 `git clone https://github.com/CommandString/san-andreas-toolkit`
+
 `composer install`
+
 copy env.example.json to env.json
+
 Add your token to env.json
+
 `php command save Radio`
 
 Then start the bot with `php index.php`
