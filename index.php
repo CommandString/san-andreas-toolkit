@@ -10,7 +10,6 @@ require_once "./vendor/autoload.php";
 
 $config = new Config();
 
-
 #############################
 #   ENVIRONMENT VARIABLES   #
 #############################
