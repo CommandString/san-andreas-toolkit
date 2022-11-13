@@ -15,7 +15,7 @@ copy env.example.json to env.json
 
 Add your token to env.json
 
-`php command save Radio`
+`php command save Station Voice`
 
 Then start the bot with `php index.php`
 
