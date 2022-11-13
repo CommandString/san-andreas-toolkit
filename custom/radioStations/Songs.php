@@ -35,7 +35,7 @@ class Songs {
                 new Song("Above The Law",           "Murder Rap",                   721),
                 new Song("Compton's Most Wanted",   "Hood Took Me Under",           985),
                 new Song("N.W.A.",                  "Express Yourself",             1192),
-                new Song("The D.O.C",               "It's Funky Enough",            1146),
+                new Song("The D.O.C",               "It's Funky Enough",            1446),
                 new Song("Da Lench Mob",            "Guerillas In Tha Mist",        1686),
                 new Song("Cypress Hill",            "How I Could Just Kill a Man",  1878),
                 new Song("Dr. Dre & Snoop Dogg",    "Deep Cover",                   2135),
