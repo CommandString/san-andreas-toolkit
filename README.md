@@ -19,5 +19,7 @@ Add your token to env.json
 
 Then start the bot with `php index.php`
 
+# CAUTION: `/voice play & /voice pause` **WILL NOT** work until Discord-PHP merges pull requests #978 & #979 to `dev-master` #
+
 # Adding additional features to the bot
 If you want to add your own features to this bot I would highly recommend you read [Discord-PHP-Design-Structure](https://github.com/CommandString/DiscordPHP-Design-Structure) which is what this bot uses as a boilerplate. If you have any questions feel free to join https://discord.gg/TgrcSkuDtQ my discord server and ask there or dm me directly at `Command_String#6538`
