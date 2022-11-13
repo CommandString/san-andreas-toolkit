@@ -30,7 +30,7 @@ class Songs {
             RadioStation::RADIO_LOS_SANTOS => [
                 //       ARTIST                             NAME                                                        TIMESTAMP
                 new Song("Dr Dre",                          "F*** Wit Dre Dre",                                         25),
-                new Song("ice Cube",                        "Check Yo Self",                                            275),
+                new Song("Ice Cube",                        "Check Yo Self",                                            275),
                 new Song("Too \$hort",                      "The Ghetto",                                               493),
                 new Song("Above The Law",                   "Murder Rap",                                               721),
                 new Song("Compton's Most Wanted",           "Hood Took Me Under",                                       985),
