@@ -12,7 +12,7 @@ class RadioStation {
     public const RADIO_X = 7;
     public const CSR_103_9 = 8;
     public const K_JAH_WEST = 9;
-    public const MASTER_SOUNDS_93_3 = 10;
+    public const MASTER_SOUNDS_98_3 = 10;
     public const WCTR = 11;
 
     private array $stationNames = [
