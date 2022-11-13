@@ -9,10 +9,8 @@ class Song {
         public readonly int $timestamp
     ) {}
 
-    public function getDuration(): ?int
+    public function getNextSong(): ?self
     {
-        $start = $this->timestamp;
-
         $next = false;
 
         foreach (Songs::getAllSongs() as $station) {
@@ -23,20 +21,19 @@ class Song {
                 }
 
                 if ($next) {
-                    $end = $song->timestamp;
-                    break;
+                    return $song;
                 }
             }
-
-            if ($next) {
-                break;
-            }
         }
 
-        if (!isset($end)) {
-            return null;
-        }
+        return null;
+    }
 
+    public function getDuration(): ?int
+    {
+        $start = $this->timestamp;
+        $end = $this->getNextSong()->timestamp;
+        
         return $end - $start;
     }
 }
