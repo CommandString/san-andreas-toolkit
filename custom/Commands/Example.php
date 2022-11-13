@@ -14,7 +14,8 @@ class Example extends Template {
 
     }
 
-    public function autocomplete(Interaction $interaction): void {
+    public function autocomplete(Interaction $interaction): void
+    {
         
     }
 
