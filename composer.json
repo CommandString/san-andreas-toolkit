@@ -1,6 +1,6 @@
 {
     "require": {
-        "team-reflex/discord-php": "dev-buffer-nice",
+        "team-reflex/discord-php": "dev-master",
         "react/event-loop": "^1.3"
     },
     "autoload": {
