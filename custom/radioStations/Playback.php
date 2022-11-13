@@ -17,14 +17,9 @@ class Playback {
     )
     {}
 
-    public function isPlaying(): bool
-    {
-        return $this->vc->isSpeaking();
-    }
-
     public function pause(): self
     {
-        if (!$this->isPlaying())
+        if (!$this->vc->isPaused())
         {
             return $this;
         }
@@ -35,7 +30,7 @@ class Playback {
 
     public function play(): self
     {
-        if ($this->isPlaying())
+        if ($this->vc->isPaused())
         {
             return $this;
         }

@@ -28,7 +28,7 @@ class Voice extends Template {
         }
 
         if ($action === self::PLAY) {
-            if (!$evc->isPlaying()) {
+            if (!$evc->vc->isPaused()) {
                 $interaction->respondWithMessage(MessageBuilder::new()->setContent("The bot is already playing"), true);
                 return;
             }
@@ -38,12 +38,12 @@ class Voice extends Template {
         }
 
         if ($action === self::PAUSE) {
-            if ($evc->isPlaying()) {
+            if ($evc->vc->isPaused()) {
                 $interaction->respondWithMessage(MessageBuilder::new()->setContent("The current playback is already paused"), true);
                 return;
             }
 
-            $evc->play();
+            $evc->pause();
             $interaction->respondWithMessage(MessageBuilder::new()->setContent("Paused current playback"), true);
         }
 
