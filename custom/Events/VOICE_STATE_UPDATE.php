@@ -19,6 +19,11 @@ class VOICE_STATE_UPDATE extends Template {
             return;
         }
 
+        if ($voiceUpdate->member->user->id === $discord->user->id) {
+            $playback->stop();
+            return;
+        }
+
         if (count($playback->vc->getChannel()->members) < 2) {
             $playback->stop();
         }
