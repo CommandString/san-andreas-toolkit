@@ -2,9 +2,7 @@
 
 namespace Discord\Bot\Events;
 
-use Discord\Bot\Commands\Song;
-use Discord\Bot\Commands\Station;
-use Discord\Bot\Commands\Voice;
+use Discord\Bot\Commands\Radio;
 use Discord\Discord;
 
 /**
@@ -15,8 +13,7 @@ class ready extends Template {
     {
         echo "\n\n{$discord->application->name} ready!\n\n";
 
-        (new Station)->listen();
-        (new Voice)->listen();
+        (new Radio)->listen();
     }
   
     public function getEvent(): string
