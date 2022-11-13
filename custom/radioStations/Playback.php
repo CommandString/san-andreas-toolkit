@@ -30,7 +30,6 @@ class Playback {
         }
 
         $this->vc->pause();
-        $this->vc->pause();
         return $this;
     }
 
