@@ -174,7 +174,7 @@ class Radio extends Template {
 
     public function getName(): array
     {
-        return ["radio", "name" => "play"];
+        return ["radio", "play", "pause", "unpause"];
     }
 
     public function getConfig(): CommandBuilder|array
