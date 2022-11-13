@@ -25,14 +25,14 @@ class RadioStation {
         self::RADIO_X =>             "Radio X",
         self::CSR_103_9 =>           "CSR 103.9",
         self::K_JAH_WEST =>          "K-JAH West",
-        self::MASTER_SOUNDS_93_3 =>  "Master Sounds 93.3",
+        self::MASTER_SOUNDS_98_3 =>  "Master Sounds 98.3",
         self::WCTR =>                "WCTR",
     ];
 
     public readonly Songs $songs;
     
-    public function __construct(public readonly int $stationId) {
-        if ($this->stationId > 11 || $this->stationId < 1) {
+    public function __construct(public readonly int $id) {
+        if ($this->id > 11 || $this->id < 1) {
             throw new \InvalidArgumentException("Station ID must be between 1 and 11");
         }
 
@@ -41,7 +41,7 @@ class RadioStation {
 
     public function getName(): string
     {
-        return $this->stationNames[$this->stationId];
+        return $this->stationNames[$this->id];
     }
 
     public function getConstantName(): string
