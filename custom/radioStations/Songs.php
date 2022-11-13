@@ -47,20 +47,19 @@ class Songs {
                 new Song("Kid Frost",                       "La Raza",                                                  3512)
             ],
             RadioStation::PLAYBACK_FM => [
-                new Song("Kool G Rap & DJ Polo",            "Road to the Riches",                                       26),
-                new Song("Big Daddy Kane",                  "Warm It Up, Kane",                                         268),
-                new Song("Spoonie Gee",                     "The Godfather",                                            479),
-                new Song("Masta Ace",                       "Me and the Biz",                                           702),
-                new Song("Slick Rick",                      "Children's Story",                                         936),
-                new Song("Public Enemy",                    "Rebel Without a Pause",                                    1191),
-                new Song("Eric B. & Rakim",                 "I Know You Got Soul",                                      1483),
-                new Song("Rob Base and DJ E-Z Rock",        "It Takes Two ",                                            1705),
-                new Song("Gang Starr",                      "B.Y.S.",                                                   1936),
-                new Song("Biz Markie",                      "The Vapors",                                               2126),
-                new Song("Brand Nubian",                    "Brand Nubian",                                             2373),
-                new Song("Ultramagnetic MCs",               "Critical Beatdown",                                        2608)
-            ],
-            RadioStation::K_DST => [
+                new Song("Masta Ace",                       "Me and the Biz",                                           20),
+                new Song("Eric B. & Rakim",                 "I Know You Got Soul",                                      307),
+                new Song("Spoonie Gee",                     "The Godfather",                                            584),
+                new Song("Big Daddy Kane",                  "Warm It Up, Kane",                                         809),
+                new Song("Kool G Rap & DJ Polo",            "Road To The Riches",                                       995),
+                new Song("Public Enemy",                    "Rebel Without a Pause",                                    1272),
+                new Song("Rob Base and DJ E-Z Rock",        "It Takes Two",                                             1526),
+                new Song("Gang Starr",                      "B.Y.S.",                                                   1751),
+                new Song("Ultramagnetic MCs",               "Critical Beatdown",                                        1933),
+                new Song("Biz Markie",                      "The Vapors",                                               2141),
+                new Song("Brand Nubian",                    "Brand Nubian",                                             2434),
+                new Song("Slick Rick",                      "Children's Story",                                         2647)
+            ],RadioStation::K_DST => [
                 new Song("Foghat",                          "Slow Ride",                                                13),
                 new Song("Creedence Clearwater Revival",    "Green River",                                              210),
                 new Song("Heart",                           "Barracuda",                                                364),
