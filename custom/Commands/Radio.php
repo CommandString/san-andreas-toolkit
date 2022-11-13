@@ -172,9 +172,9 @@ class Radio extends Template {
         $interaction->autoCompleteResult($choices);
     }
 
-    public function getName(): string
+    public function getName(): array
     {
-        return "radio";
+        return ["radio", "name" => "play"];
     }
 
     public function getConfig(): CommandBuilder|array
@@ -194,7 +194,7 @@ class Radio extends Template {
         }
         
         return (new CommandBuilder)
-            ->setName($this->getName())
+            ->setName($this->getName()[0])
             ->setDescription("Control the radio from Grand Theft Auto San Andreas")
             ->addOption((new Option(Config::get()->discord))
                 ->setName("play")

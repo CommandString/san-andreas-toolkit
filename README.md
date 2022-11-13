@@ -1,9 +1,7 @@
 # San Andreas
 A Grand Theft Auto San Andreas themed discord bot. *Inspired by realdiegopoptart's San Andreas Toolkit bot*
 
-### NOTICE: `/radio unpause & /voice pause` **WILL NOT** work until Discord-PHP merges pull requests [#978](https://github.com/discord-php/DiscordPHP/pull/978) & [#979](https://github.com/discord-php/DiscordPHP/pull/979) to `dev-master`
-
-### NOTICE: `/radio play song:` option autocomplete will not work until pull request [#980](https://github.com/discord-php/DiscordPHP/pull/980)
+### NOTICE: `/radio unpause & /radio pause` are currently broken, waiting for a bug fix on DiscordPHP's end
 
 # Prerequisites #
 

@@ -49,9 +49,9 @@ abstract class Template {
     abstract public function autocomplete(Interaction $interaction): void;
 
     /**
-     * @return string
+     * @return array|string
      */
-    abstract public function getName(): string;
+    abstract public function getName(): array|string;
 
     /**
      * @return CommandBuilder
