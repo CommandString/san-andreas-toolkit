@@ -32,8 +32,10 @@ class Song {
     public function getDuration(): ?int
     {
         $start = $this->timestamp;
-        $end = $this->getNextSong()->timestamp;
+        $end = $this->getNextSong()->timestamp ?? 0;
         
-        return $end - $start;
+        $duration = $end - $start;
+        
+        return ($duration > 0) ? $duration : null;
     }
 }

@@ -106,7 +106,11 @@ class Radio extends Template {
         Config::get()->discord->joinVoiceChannel($voiceChannel)->then(function (VoiceClient $vc) use ($station, $song) {
             Config::get()->playbacks->addPlayback(new Playback($vc->getChannel()->guild_id, $vc, $station, $song));
 
-            $options = ($song !== null) ? ['-ss', $song->timestamp, '-t', $song->getDuration()] : [];
+            $options = ($song !== null) ? ['-ss', $song->timestamp, ] : [];
+
+            if ($song !== null && $song->getDuration() !== null) {
+                array_push($options, '-t', $song->getDuration());
+            }
 
             $p = $vc->ffmpegEncode($station->getStreamUrl(), $options);
             $p->start();
