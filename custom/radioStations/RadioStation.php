@@ -28,11 +28,15 @@ class RadioStation {
         self::MASTER_SOUNDS_93_3 =>  "Master Sounds 93.3",
         self::WCTR =>                "WCTR",
     ];
+
+    public readonly Songs $songs;
     
     public function __construct(public readonly int $stationId) {
         if ($this->stationId > 11 || $this->stationId < 1) {
             throw new \InvalidArgumentException("Station ID must be between 1 and 11");
         }
+
+        $this->songs = new Songs($this);
     }
 
     public function getName(): string
@@ -48,11 +52,6 @@ class RadioStation {
     public function getStreamUrl(): string
     {
         return realpath(__DIR__."/".$this->getConstantName().".mp3");
-    }
-
-    public function getSongs(): array
-    {
-        return [];
     }
 
     public static function getAllStations(): array

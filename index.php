@@ -3,6 +3,7 @@
 use Discord\Bot\Config;
 use Discord\Bot\Events\ready;
 use Discord\Bot\Events\VOICE_STATE_UPDATE;
+use Discord\Bot\radioStations\Playbacks;
 use Discord\Discord;
 use Discord\WebSockets\Intents;
 
@@ -13,7 +14,7 @@ $config = new Config();
 #############################
 #   ENVIRONMENT VARIABLES   #
 #############################
-$config->stationsPlaying = new stdClass;
+$config->playbacks = new Playbacks();
 
 $config->discord = new Discord([
     "token" => $config->token,
