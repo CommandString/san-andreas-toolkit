@@ -1,5 +1,7 @@
+# THIS DISCORD BOT IS OUT OF DATE. MAY BE UPDATED SOON.
+
 # San Andreas
-A Grand Theft Auto San Andreas themed discord bot. *Inspired by realdiegopoptart's San Andreas Toolkit bot*
+A Grand Theft Auto San Andreas-themed radio music bot. *Inspired by realdiegopoptart's San Andreas Toolkit bot*
 
 ### NOTICE: `/radio unpause & /radio pause` are currently broken, waiting for a bug fix on DiscordPHP's end
 
@@ -11,7 +13,7 @@ A Grand Theft Auto San Andreas themed discord bot. *Inspired by realdiegopoptart
 
 # Setup
 
-`git clone https://github.com/CommandString/san-andreas-toolkit`
+`git clone https://github.com/realdiegopoptart/san-andreas`
 
 `composer install`
 
